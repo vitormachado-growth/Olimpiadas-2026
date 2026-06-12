@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Súmula de Xadrez — Olimpíadas 2026</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body data-sumula="xadrez">
+  <header class="topbar no-print"><h1>Súmula · Xadrez ♟️</h1></header>
+
+  <div class="acoes no-print">
+    <a class="btn btn-claro voltar" href="../index.html">← Voltar</a>
+    <button class="btn btn-primario" onclick="imprimirSumula()">🖨️ Imprimir</button>
+    <button class="btn btn-ouro" onclick="salvarRascunho()">💾 Salvar rascunho</button>
+    <button class="btn btn-claro" onclick="limparSumula()">🧹 Limpar</button>
+  </div>
+
+  <main class="sumula">
+    <div class="sumula-head">
+      <div class="icone">♟️</div>
+      <div><div class="evento">Olimpíadas 2026 · Súmula Oficial</div><h2>Xadrez</h2></div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Dados da partida</div>
+      <div class="campos">
+        <div class="campo"><label>Data</label><input type="date" name="data" /></div>
+        <div class="campo"><label>Horário</label><input type="time" name="hora" /></div>
+        <div class="campo"><label>Local / Mesa nº</label><input type="text" name="local" /></div>
+        <div class="campo"><label>Dia / Rodada</label><input type="text" name="rodada" /></div>
+        <div class="campo"><label>Categoria</label>
+          <select name="categoria"><option value="">—</option><option>Masculino</option><option>Feminino</option><option>Misto</option></select>
+        </div>
+        <div class="campo"><label>Ritmo / Tempo</label><input type="text" name="ritmo" placeholder="Ex: 10 min + 5s" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Jogadores</div>
+      <div class="campos">
+        <div class="campo"><label>⚪ Brancas — Nome</label><input type="text" name="brancas" /></div>
+        <div class="campo"><label>Turma (Brancas)</label><input type="text" name="turmaBrancas" /></div>
+        <div class="campo"><label>⚫ Pretas — Nome</label><input type="text" name="pretas" /></div>
+        <div class="campo"><label>Turma (Pretas)</label><input type="text" name="turmaPretas" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Resultado</div>
+      <div class="campos">
+        <div class="campo"><label>Resultado</label>
+          <select name="resultado">
+            <option value="">—</option>
+            <option>1 - 0 (vitória das Brancas)</option>
+            <option>0 - 1 (vitória das Pretas)</option>
+            <option>½ - ½ (empate)</option>
+            <option>W.O. (não comparecimento)</option>
+          </select>
+        </div>
+        <div class="campo"><label>Vencedor</label><input type="text" name="vencedor" /></div>
+        <div class="campo"><label>Encerrou por</label>
+          <select name="motivo">
+            <option value="">—</option>
+            <option>Xeque-mate</option>
+            <option>Abandono / Desistência</option>
+            <option>Tempo esgotado</option>
+            <option>Empate (afogamento)</option>
+            <option>Empate (acordo)</option>
+            <option>Empate (repetição)</option>
+          </select>
+        </div>
+        <div class="campo"><label>Nº de lances</label><input type="text" name="lances" /></div>
+        <div class="campo"><label>Duração da partida</label><input type="text" name="duracao" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Arbitragem</div>
+      <div class="campos">
+        <div class="campo"><label>Árbitro</label><input type="text" name="arb1" /></div>
+        <div class="campo"><label>Auxiliar</label><input type="text" name="arb2" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Observações</div>
+      <textarea class="obs" name="obs"></textarea>
+    </div>
+
+    <div class="assinaturas">
+      <div class="assinatura"><div class="linha">Árbitro</div></div>
+      <div class="assinatura"><div class="linha">Jogador (Brancas)</div></div>
+      <div class="assinatura"><div class="linha">Jogador (Pretas)</div></div>
+    </div>
+  </main>
+
+  <footer class="rodape no-print">Olimpíadas 2026 · Súmula de Xadrez</footer>
+  <script src="../assets/js/sumula.js"></script>
+</body>
+</html>

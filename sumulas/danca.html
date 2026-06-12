@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Súmula de Dança — Olimpíadas 2026</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body data-sumula="danca">
+  <header class="topbar no-print"><h1>Súmula · Dança 💃</h1></header>
+
+  <div class="acoes no-print">
+    <a class="btn btn-claro voltar" href="../index.html">← Voltar</a>
+    <button class="btn btn-primario" onclick="imprimirSumula()">🖨️ Imprimir</button>
+    <button class="btn btn-ouro" onclick="salvarRascunho()">💾 Salvar rascunho</button>
+    <button class="btn btn-claro" onclick="limparSumula()">🧹 Limpar</button>
+  </div>
+
+  <main class="sumula">
+    <div class="sumula-head">
+      <div class="icone">💃</div>
+      <div><div class="evento">Olimpíadas 2026 · Ficha de Avaliação</div><h2>Dança</h2></div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Dados da apresentação</div>
+      <div class="campos">
+        <div class="campo"><label>Data</label><input type="date" name="data" /></div>
+        <div class="campo"><label>Horário</label><input type="time" name="hora" /></div>
+        <div class="campo"><label>Local / Palco</label><input type="text" name="local" /></div>
+        <div class="campo"><label>Ordem de entrada</label><input type="text" name="ordem" /></div>
+        <div class="campo"><label>Grupo / Turma</label><input type="text" name="grupo" /></div>
+        <div class="campo"><label>Nome da coreografia</label><input type="text" name="coreografia" /></div>
+        <div class="campo"><label>Estilo / Ritmo</label><input type="text" name="estilo" /></div>
+        <div class="campo"><label>Nº de participantes</label><input type="text" name="nparticipantes" /></div>
+        <div class="campo"><label>Tempo (min)</label><input type="text" name="tempo" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Critérios de avaliação (notas de 0 a 10)</div>
+      <table class="tab">
+        <thead>
+          <tr><th>Critério</th><th class="num">Jurado 1</th><th class="num">Jurado 2</th><th class="num">Jurado 3</th><th class="num">Média</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Coreografia / Criatividade</td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+          <tr><td>Sincronia / Entrosamento</td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+          <tr><td>Ritmo / Musicalidade</td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+          <tr><td>Técnica / Execução</td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+          <tr><td>Figurino / Apresentação</td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+          <tr><td>Expressão / Energia do público</td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+          <tr><th style="text-align:right;">TOTAL</th><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Resultado</div>
+      <div class="campos">
+        <div class="campo"><label>Nota final (média geral)</label><input type="text" name="notafinal" /></div>
+        <div class="campo"><label>Classificação</label><input type="text" name="classificacao" placeholder="Ex: 1º lugar" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Jurados</div>
+      <div class="campos">
+        <div class="campo"><label>Jurado 1</label><input type="text" name="jurado1" /></div>
+        <div class="campo"><label>Jurado 2</label><input type="text" name="jurado2" /></div>
+        <div class="campo"><label>Jurado 3</label><input type="text" name="jurado3" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Observações dos jurados</div>
+      <textarea class="obs" name="obs"></textarea>
+    </div>
+
+    <div class="assinaturas">
+      <div class="assinatura"><div class="linha">Jurado 1</div></div>
+      <div class="assinatura"><div class="linha">Jurado 2</div></div>
+      <div class="assinatura"><div class="linha">Jurado 3</div></div>
+    </div>
+  </main>
+
+  <footer class="rodape no-print">Olimpíadas 2026 · Ficha de Avaliação de Dança</footer>
+  <script src="../assets/js/sumula.js"></script>
+</body>
+</html>

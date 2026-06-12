@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teste de Cooper — Olimpíadas 2026</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body data-sumula="teste-cooper">
+  <header class="topbar no-print"><h1>Súmula · Teste de Cooper 🏃</h1></header>
+
+  <div class="acoes no-print">
+    <a class="btn btn-claro voltar" href="../index.html">← Voltar</a>
+    <button class="btn btn-primario" onclick="imprimirSumula()">🖨️ Imprimir</button>
+    <button class="btn btn-ouro" onclick="salvarRascunho()">💾 Salvar rascunho</button>
+    <button class="btn btn-claro" onclick="limparSumula()">🧹 Limpar</button>
+  </div>
+
+  <main class="sumula">
+    <div class="sumula-head">
+      <div class="icone">🏃</div>
+      <div><div class="evento">Olimpíadas 2026 · Ficha de Teste</div><h2>Teste de Cooper (12 min)</h2></div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Dados do teste</div>
+      <div class="campos">
+        <div class="campo"><label>Data</label><input type="date" name="data" /></div>
+        <div class="campo"><label>Horário</label><input type="time" name="hora" /></div>
+        <div class="campo"><label>Local / Pista</label><input type="text" name="local" /></div>
+        <div class="campo"><label>Dia / Rodada</label><input type="text" name="rodada" /></div>
+        <div class="campo"><label>Turma</label><input type="text" name="turma" /></div>
+        <div class="campo"><label>Categoria</label>
+          <select name="categoria"><option value="">—</option><option>Masculino</option><option>Feminino</option><option>Misto</option></select>
+        </div>
+        <div class="campo"><label>Comprimento da volta (m)</label><input type="text" name="volta" placeholder="Ex: 200" /></div>
+        <div class="campo"><label>Professor responsável</label><input type="text" name="professor" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Resultados dos participantes</div>
+      <table class="tab" id="tab">
+        <thead>
+          <tr><th class="num">Nº</th><th>Nome do aluno</th><th class="num">Voltas</th><th class="num">Distância (m)</th><th class="num">VO₂máx</th><th>Classificação</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+          <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td><input></td></tr>
+        </tbody>
+      </table>
+      <button class="btn btn-claro no-print" style="margin-top:6px;font-size:.8rem;padding:5px 12px;" onclick="adicionarLinha('tab')">+ Linha</button>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Como calcular</div>
+      <p style="font-size:.85rem;color:#3a4256;margin:0;">
+        <b>Distância</b> = nº de voltas × comprimento da volta (em metros).<br />
+        <b>VO₂máx</b> (mL/kg/min) = (distância em metros − 504,9) ÷ 44,73.<br />
+        <span style="color:#5a6478;">Ex.: 2400 m → (2400 − 504,9) ÷ 44,73 ≈ <b>42,4</b>.</span>
+      </p>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Observações</div>
+      <textarea class="obs" name="obs"></textarea>
+    </div>
+
+    <div class="assinaturas">
+      <div class="assinatura"><div class="linha">Professor responsável</div></div>
+      <div class="assinatura"><div class="linha">Auxiliar / Cronometrista</div></div>
+    </div>
+  </main>
+
+  <footer class="rodape no-print">Olimpíadas 2026 · Teste de Cooper</footer>
+  <script src="../assets/js/sumula.js"></script>
+</body>
+</html>

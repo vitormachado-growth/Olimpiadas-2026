@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controle de Cartões — Handebol — Olimpíadas 2026</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body data-sumula="cartoes-handebol">
+  <header class="topbar no-print"><h1>Controle de Cartões · Handebol</h1></header>
+
+  <div class="acoes no-print">
+    <a class="btn btn-claro voltar" href="../index.html">← Voltar</a>
+    <button class="btn btn-primario" onclick="imprimirSumula()">🖨️ Imprimir</button>
+    <button class="btn btn-ouro" onclick="salvarRascunho()">💾 Salvar rascunho</button>
+    <button class="btn btn-claro" onclick="limparSumula()">🧹 Limpar</button>
+  </div>
+
+  <main class="sumula">
+    <div class="sumula-head">
+      <div class="icone">🤾</div>
+      <div><div class="evento">Olimpíadas 2026 · Disciplina</div><h2>Controle de Cartões — Handebol</h2></div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Dados</div>
+      <div class="campos">
+        <div class="campo"><label>Competição</label><input type="text" name="competicao" value="Olimpíadas 2026" /></div>
+        <div class="campo"><label>Fase / Rodada</label><input type="text" name="fase" /></div>
+        <div class="campo"><label>Atualizado em</label><input type="date" name="data" /></div>
+        <div class="campo"><label>Responsável</label><input type="text" name="responsavel" /></div>
+      </div>
+      <p style="font-size:.8rem;color:#5a6478;margin:10px 0 0;">
+        Cada bandeira é um time. Há apenas um time por bandeira em cada modalidade.
+        Registre o total de cartões acumulados por bandeira.
+      </p>
+    </div>
+
+    <!-- MASCULINO -->
+    <div class="bloco">
+      <div class="bloco-titulo">Masculino</div>
+      <table class="tab" id="tabMasc">
+        <thead>
+          <tr>
+            <th>Bandeira (Time)</th><th>Time / Turma</th>
+            <th class="num f-amarela">Amarelos</th><th class="num f-vermelha">Vermelhos</th>
+            <th class="num f-total">Total</th><th>Observações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="bandeira b-amarela"></span> Amarela</td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num f-total"><input></td><td><input></td></tr>
+          <tr><td><span class="bandeira b-vermelha"></span> Vermelha</td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num f-total"><input></td><td><input></td></tr>
+          <tr><td><span class="bandeira b-azul"></span> Azul</td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num f-total"><input></td><td><input></td></tr>
+          <tr><td><span class="bandeira b-verde"></span> Verde</td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num f-total"><input></td><td><input></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- FEMININO -->
+    <div class="bloco">
+      <div class="bloco-titulo">Feminino</div>
+      <table class="tab" id="tabFem">
+        <thead>
+          <tr>
+            <th>Bandeira (Time)</th><th>Time / Turma</th>
+            <th class="num f-amarela">Amarelos</th><th class="num f-vermelha">Vermelhos</th>
+            <th class="num f-total">Total</th><th>Observações</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="bandeira b-amarela"></span> Amarela</td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num f-total"><input></td><td><input></td></tr>
+          <tr><td><span class="bandeira b-vermelha"></span> Vermelha</td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num f-total"><input></td><td><input></td></tr>
+          <tr><td><span class="bandeira b-azul"></span> Azul</td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num f-total"><input></td><td><input></td></tr>
+          <tr><td><span class="bandeira b-verde"></span> Verde</td><td><input></td><td class="num"><input></td><td class="num"><input></td><td class="num f-total"><input></td><td><input></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Observações gerais</div>
+      <textarea class="obs" name="obs"></textarea>
+    </div>
+
+    <div class="assinaturas">
+      <div class="assinatura"><div class="linha">Coordenação</div></div>
+      <div class="assinatura"><div class="linha">Arbitragem</div></div>
+    </div>
+  </main>
+
+  <footer class="rodape no-print">Olimpíadas 2026 · Controle de Cartões — Handebol</footer>
+  <script src="../assets/js/sumula.js"></script>
+</body>
+</html>

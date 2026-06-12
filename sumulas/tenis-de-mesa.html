@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Súmula de Tênis de Mesa — Olimpíadas 2026</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body data-sumula="tenis-de-mesa">
+  <header class="topbar no-print"><h1>Súmula · Tênis de Mesa 🏓</h1></header>
+
+  <div class="acoes no-print">
+    <a class="btn btn-claro voltar" href="../index.html">← Voltar</a>
+    <button class="btn btn-primario" onclick="imprimirSumula()">🖨️ Imprimir</button>
+    <button class="btn btn-ouro" onclick="salvarRascunho()">💾 Salvar rascunho</button>
+    <button class="btn btn-claro" onclick="limparSumula()">🧹 Limpar</button>
+  </div>
+
+  <main class="sumula">
+    <div class="sumula-head">
+      <div class="icone">🏓</div>
+      <div><div class="evento">Olimpíadas 2026 · Súmula Oficial</div><h2>Tênis de Mesa (Ping Pong)</h2></div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Dados da partida</div>
+      <div class="campos">
+        <div class="campo"><label>Data</label><input type="date" name="data" /></div>
+        <div class="campo"><label>Horário</label><input type="time" name="hora" /></div>
+        <div class="campo"><label>Mesa nº</label><input type="text" name="mesa" /></div>
+        <div class="campo"><label>Dia / Rodada</label><input type="text" name="rodada" /></div>
+        <div class="campo"><label>Categoria</label>
+          <select name="categoria"><option value="">—</option><option>Masculino</option><option>Feminino</option><option>Misto</option></select>
+        </div>
+        <div class="campo"><label>Modalidade</label>
+          <select name="modalidade"><option value="">—</option><option>Individual</option><option>Duplas</option></select>
+        </div>
+        <div class="campo"><label>Disputa</label>
+          <select name="disputa"><option value="">—</option><option>Melhor de 3 sets</option><option>Melhor de 5 sets</option><option>Melhor de 7 sets</option></select>
+        </div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Jogadores / Turmas</div>
+      <div class="campos">
+        <div class="campo"><label>Jogador(a) / Dupla A</label><input type="text" name="jogA" /></div>
+        <div class="campo"><label>Turma A</label><input type="text" name="turmaA" /></div>
+        <div class="campo"><label>Jogador(a) / Dupla B</label><input type="text" name="jogB" /></div>
+        <div class="campo"><label>Turma B</label><input type="text" name="turmaB" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Pontuação por set</div>
+      <table class="tab">
+        <thead>
+          <tr><th>Jogador / Dupla</th><th class="num">1º</th><th class="num">2º</th><th class="num">3º</th><th class="num">4º</th><th class="num">5º</th><th class="num">6º</th><th class="num">7º</th><th class="num">Sets</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><input name="linhaA" placeholder="Lado A"></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+          <tr><td><input name="linhaB" placeholder="Lado B"></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+        </tbody>
+      </table>
+      <div class="placar" style="margin-top:12px;">
+        <div class="time" style="font-weight:700;color:#0b2e63;">Vencedor:</div>
+        <div><input class="gols" name="setsA" style="width:60px;font-size:1.6rem;" /><span class="x"> x </span><input class="gols" name="setsB" style="width:60px;font-size:1.6rem;" /></div>
+        <div class="time"><input class="nome-time" name="vencedor" placeholder="Nome do vencedor" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Arbitragem</div>
+      <div class="campos">
+        <div class="campo"><label>Árbitro / Mesário</label><input type="text" name="arb1" /></div>
+        <div class="campo"><label>Auxiliar</label><input type="text" name="arb2" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Observações</div>
+      <textarea class="obs" name="obs"></textarea>
+    </div>
+
+    <div class="assinaturas">
+      <div class="assinatura"><div class="linha">Árbitro</div></div>
+      <div class="assinatura"><div class="linha">Jogador / Dupla A</div></div>
+      <div class="assinatura"><div class="linha">Jogador / Dupla B</div></div>
+    </div>
+  </main>
+
+  <footer class="rodape no-print">Olimpíadas 2026 · Súmula de Tênis de Mesa</footer>
+  <script src="../assets/js/sumula.js"></script>
+</body>
+</html>

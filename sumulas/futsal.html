@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Súmula de Futsal — Olimpíadas 2026</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body data-sumula="futsal">
+  <header class="topbar no-print">
+    <h1>Súmula · Futsal ⚽</h1>
+  </header>
+
+  <div class="acoes no-print">
+    <a class="btn btn-claro voltar" href="../index.html">← Voltar</a>
+    <button class="btn btn-primario" onclick="imprimirSumula()">🖨️ Imprimir</button>
+    <button class="btn btn-ouro" onclick="salvarRascunho()">💾 Salvar rascunho</button>
+    <button class="btn btn-claro" onclick="limparSumula()">🧹 Limpar</button>
+  </div>
+
+  <main class="sumula">
+    <div class="sumula-head">
+      <div class="icone">⚽</div>
+      <div>
+        <div class="evento">Olimpíadas 2026 · Súmula Oficial</div>
+        <h2>Futsal</h2>
+      </div>
+    </div>
+
+    <!-- Dados do jogo -->
+    <div class="bloco">
+      <div class="bloco-titulo">Dados da partida</div>
+      <div class="campos">
+        <div class="campo"><label>Data</label><input type="date" name="data" /></div>
+        <div class="campo"><label>Horário</label><input type="time" name="hora" /></div>
+        <div class="campo"><label>Local / Quadra</label><input type="text" name="local" /></div>
+        <div class="campo"><label>Dia / Rodada</label><input type="text" name="rodada" placeholder="Ex: Dia 2 — Quartas" /></div>
+        <div class="campo"><label>Categoria</label>
+          <select name="categoria"><option value="">—</option><option>Masculino</option><option>Feminino</option><option>Misto</option></select>
+        </div>
+        <div class="campo"><label>Nº do jogo</label><input type="text" name="numjogo" /></div>
+      </div>
+    </div>
+
+    <!-- Placar -->
+    <div class="bloco">
+      <div class="bloco-titulo">Placar</div>
+      <div class="placar">
+        <div class="time"><input class="nome-time" name="timeA" placeholder="Equipe / Turma A" /></div>
+        <div>
+          <input class="gols" name="golsA" inputmode="numeric" />
+          <span class="x"> x </span>
+          <input class="gols" name="golsB" inputmode="numeric" />
+        </div>
+        <div class="time"><input class="nome-time" name="timeB" placeholder="Equipe / Turma B" /></div>
+      </div>
+      <div class="campos" style="margin-top:10px;">
+        <div class="campo"><label>Gols 1º tempo (A x B)</label><input type="text" name="ht" placeholder="0 x 0" /></div>
+        <div class="campo"><label>Pênaltis (se houver)</label><input type="text" name="penaltis" placeholder="0 x 0" /></div>
+      </div>
+    </div>
+
+    <!-- Jogadores -->
+    <div class="bloco">
+      <div class="bloco-titulo">Relação de atletas</div>
+      <div class="duas-tabelas">
+        <div>
+          <h4>Equipe A</h4>
+          <table class="tab" id="tabA">
+            <thead><tr><th class="num">Nº</th><th>Nome do atleta</th><th class="num">Gols</th><th class="num">Cartão</th></tr></thead>
+            <tbody>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+            </tbody>
+          </table>
+          <button class="btn btn-claro no-print" style="margin-top:6px;font-size:.8rem;padding:5px 12px;" onclick="adicionarLinha('tabA')">+ Linha</button>
+        </div>
+        <div>
+          <h4>Equipe B</h4>
+          <table class="tab" id="tabB">
+            <thead><tr><th class="num">Nº</th><th>Nome do atleta</th><th class="num">Gols</th><th class="num">Cartão</th></tr></thead>
+            <tbody>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input placeholder="A/V"></td></tr>
+            </tbody>
+          </table>
+          <button class="btn btn-claro no-print" style="margin-top:6px;font-size:.8rem;padding:5px 12px;" onclick="adicionarLinha('tabB')">+ Linha</button>
+        </div>
+      </div>
+      <p style="font-size:.75rem;color:#5a6478;margin:6px 0 0;">Cartão: A = amarelo · V = vermelho</p>
+    </div>
+
+    <!-- Faltas acumuladas -->
+    <div class="bloco">
+      <div class="bloco-titulo">Faltas acumuladas</div>
+      <div class="campos">
+        <div class="campo"><label>Equipe A — 1º tempo</label><input type="text" name="faltasA1" /></div>
+        <div class="campo"><label>Equipe A — 2º tempo</label><input type="text" name="faltasA2" /></div>
+        <div class="campo"><label>Equipe B — 1º tempo</label><input type="text" name="faltasB1" /></div>
+        <div class="campo"><label>Equipe B — 2º tempo</label><input type="text" name="faltasB2" /></div>
+      </div>
+    </div>
+
+    <!-- Arbitragem -->
+    <div class="bloco">
+      <div class="bloco-titulo">Arbitragem e mesa</div>
+      <div class="campos">
+        <div class="campo"><label>Árbitro principal</label><input type="text" name="arb1" /></div>
+        <div class="campo"><label>2º Árbitro</label><input type="text" name="arb2" /></div>
+        <div class="campo"><label>Cronometrista</label><input type="text" name="crono" /></div>
+        <div class="campo"><label>Anotador (mesa)</label><input type="text" name="mesa" /></div>
+      </div>
+    </div>
+
+    <!-- Observações -->
+    <div class="bloco">
+      <div class="bloco-titulo">Observações / ocorrências</div>
+      <textarea class="obs" name="obs"></textarea>
+    </div>
+
+    <!-- Assinaturas -->
+    <div class="assinaturas">
+      <div class="assinatura"><div class="linha">Árbitro</div></div>
+      <div class="assinatura"><div class="linha">Capitão Equipe A</div></div>
+      <div class="assinatura"><div class="linha">Capitão Equipe B</div></div>
+    </div>
+  </main>
+
+  <footer class="rodape no-print">Olimpíadas 2026 · Súmula de Futsal</footer>
+  <script src="../assets/js/sumula.js"></script>
+</body>
+</html>

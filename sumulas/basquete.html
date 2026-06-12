@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Súmula de Basquete — Olimpíadas 2026</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body data-sumula="basquete">
+  <header class="topbar no-print"><h1>Súmula · Basquete 🏀</h1></header>
+
+  <div class="acoes no-print">
+    <a class="btn btn-claro voltar" href="../index.html">← Voltar</a>
+    <button class="btn btn-primario" onclick="imprimirSumula()">🖨️ Imprimir</button>
+    <button class="btn btn-ouro" onclick="salvarRascunho()">💾 Salvar rascunho</button>
+    <button class="btn btn-claro" onclick="limparSumula()">🧹 Limpar</button>
+  </div>
+
+  <main class="sumula">
+    <div class="sumula-head">
+      <div class="icone">🏀</div>
+      <div><div class="evento">Olimpíadas 2026 · Súmula Oficial</div><h2>Basquetebol</h2></div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Dados da partida</div>
+      <div class="campos">
+        <div class="campo"><label>Data</label><input type="date" name="data" /></div>
+        <div class="campo"><label>Horário</label><input type="time" name="hora" /></div>
+        <div class="campo"><label>Local / Quadra</label><input type="text" name="local" /></div>
+        <div class="campo"><label>Dia / Rodada</label><input type="text" name="rodada" /></div>
+        <div class="campo"><label>Categoria</label>
+          <select name="categoria"><option value="">—</option><option>Masculino</option><option>Feminino</option><option>Misto</option></select>
+        </div>
+        <div class="campo"><label>Nº do jogo</label><input type="text" name="numjogo" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Pontuação por período</div>
+      <table class="tab">
+        <thead>
+          <tr><th>Equipe</th><th class="num">1º</th><th class="num">2º</th><th class="num">3º</th><th class="num">4º</th><th class="num">Prorrog.</th><th class="num">Total</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><input name="timeA" placeholder="Equipe / Turma A"></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+          <tr><td><input name="timeB" placeholder="Equipe / Turma B"></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Relação de atletas e estatísticas</div>
+      <div class="duas-tabelas">
+        <div>
+          <h4>Equipe A</h4>
+          <table class="tab" id="tabA">
+            <thead><tr><th class="num">Nº</th><th>Nome do atleta</th><th class="num">Pts</th><th class="num">Faltas</th></tr></thead>
+            <tbody>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+            </tbody>
+          </table>
+          <button class="btn btn-claro no-print" style="margin-top:6px;font-size:.8rem;padding:5px 12px;" onclick="adicionarLinha('tabA')">+ Linha</button>
+        </div>
+        <div>
+          <h4>Equipe B</h4>
+          <table class="tab" id="tabB">
+            <thead><tr><th class="num">Nº</th><th>Nome do atleta</th><th class="num">Pts</th><th class="num">Faltas</th></tr></thead>
+            <tbody>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+              <tr><td class="num"><input></td><td><input></td><td class="num"><input></td><td class="num"><input></td></tr>
+            </tbody>
+          </table>
+          <button class="btn btn-claro no-print" style="margin-top:6px;font-size:.8rem;padding:5px 12px;" onclick="adicionarLinha('tabB')">+ Linha</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Faltas coletivas por período</div>
+      <div class="campos">
+        <div class="campo"><label>Equipe A (1/2/3/4)</label><input type="text" name="fcA" placeholder="Ex: 2/3/1/4" /></div>
+        <div class="campo"><label>Equipe B (1/2/3/4)</label><input type="text" name="fcB" placeholder="Ex: 1/2/4/3" /></div>
+        <div class="campo"><label>Tempos pedidos A</label><input type="text" name="toA" /></div>
+        <div class="campo"><label>Tempos pedidos B</label><input type="text" name="toB" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Arbitragem e mesa</div>
+      <div class="campos">
+        <div class="campo"><label>Árbitro 1</label><input type="text" name="arb1" /></div>
+        <div class="campo"><label>Árbitro 2</label><input type="text" name="arb2" /></div>
+        <div class="campo"><label>Apontador</label><input type="text" name="mesa" /></div>
+        <div class="campo"><label>Cronometrista</label><input type="text" name="crono" /></div>
+      </div>
+    </div>
+
+    <div class="bloco">
+      <div class="bloco-titulo">Observações / ocorrências</div>
+      <textarea class="obs" name="obs"></textarea>
+    </div>
+
+    <div class="assinaturas">
+      <div class="assinatura"><div class="linha">Árbitro</div></div>
+      <div class="assinatura"><div class="linha">Capitão Equipe A</div></div>
+      <div class="assinatura"><div class="linha">Capitão Equipe B</div></div>
+    </div>
+  </main>
+
+  <footer class="rodape no-print">Olimpíadas 2026 · Súmula de Basquete</footer>
+  <script src="../assets/js/sumula.js"></script>
+</body>
+</html>
